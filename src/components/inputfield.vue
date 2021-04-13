@@ -2,13 +2,14 @@
   <input class="text-gray-400 text-2xl" type="text" v-bind:placeholder="placeholder" />
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
   name: 'Inputfield',
   props: {
     placeholder: String
   }
-}
+})
 </script>
 
 <style scoped>

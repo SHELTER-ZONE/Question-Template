@@ -2,13 +2,14 @@
   <button class="text-gray-400 text-2xl">{{text}}</button>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default ({
   name: 'Button',
   props: {
     text: String
   }
-}
+})
 </script>
 
 <style scoped>

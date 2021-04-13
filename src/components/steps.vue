@@ -4,10 +4,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import Step from './step.vue'
 
-export default {
+export default defineComponent({
   name: 'Steps',
   components: {
     Step  
@@ -15,7 +16,7 @@ export default {
   props: {
     steps: Array
   }
-}
+})
 </script>
 
 <style scoped>

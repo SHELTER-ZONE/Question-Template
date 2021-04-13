@@ -2,13 +2,14 @@
   <textarea class="text-gray-400 text-2xl" rows="5" v-bind:placeholder="placeholder"></textarea>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
   name: 'Messagefield',
   props: {
     placeholder: String
   }
-}
+})
 </script>
 
 <style scoped>

@@ -1,6 +1,8 @@
 <template>
   <Header title="SHELTER ZONE - 問題模板" />
+  
   <Steps :steps="['步驟 1', '步驟 2', '步驟 3', '步驟 4', '步驟 5']" />
+  
   <div class="container bg-cool-gray-700">
     <h1 class="bg-cool-gray-700 text-gray-400 text-3xl">步驟 1</h1>
     <p class="bg-cool-gray-700 text-gray-500 text-xl">
@@ -11,6 +13,7 @@
     <Selectfield :options="['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5']"/>
     <Messagefield placeholder="Example Textarea"/>
   </div>
+
   <div class="actionbar">
     <Button text="RESET" />
     <Button text="CONTINUE" />
@@ -19,15 +22,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-
 import 'virtual:windi.css'
 
-import Header from './components/header.vue'
-import Steps from './components/steps.vue'
-import Button from './components/button.vue'
-import Inputfield from './components/inputfield.vue'
-import Selectfield from './components/selectfield.vue'
-import Messagefield from './components/messagefield.vue'
+import Header from '@/components/header.vue'
+import Steps from '@/components/steps.vue'
+import Button from '@/components/button.vue'
+import Inputfield from '@/components/inputfield.vue'
+import Selectfield from '@/components/selectfield.vue'
+import Messagefield from '@/components/messagefield.vue'
 
 export default defineComponent({
   name: 'App',
@@ -45,7 +47,7 @@ export default defineComponent({
 <style>
 @font-face {
   font-family: DisposableDroidBB;
-  src: url('./assets/disposabledroid-bb.regular.ttf');
+  src: url("@/assets/disposabledroid-bb.regular.ttf");
 }
 
 * {

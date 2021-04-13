@@ -4,13 +4,14 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lanf="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
   name: 'Step',
   props: {
     text: String
   }
-}
+})
 </script>
 
 <style scoped>
