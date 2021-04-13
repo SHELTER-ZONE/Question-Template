@@ -3,9 +3,9 @@
   
   <Steps :steps="['步驟 1', '步驟 2', '步驟 3', '步驟 4', '步驟 5']" />
   
-  <div class="container bg-cool-gray-700">
-    <h1 class="bg-cool-gray-700 text-gray-400 text-3xl">步驟 1</h1>
-    <p class="bg-cool-gray-700 text-gray-500 text-xl">
+  <div class="container">
+    <h1>步驟 1</h1>
+    <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </p>
@@ -69,6 +69,7 @@ export default defineComponent({
 }
 
 .container {
+  @apply bg-cool-gray-700;
   margin: 60px auto;
   max-width: 55rem;
   padding: 40px;
@@ -78,5 +79,22 @@ export default defineComponent({
 
 .container h1, .container p {
   margin-bottom: 10px;
+}
+
+h1 {
+  @apply bg-cool-gray-700;
+  @apply text-gray-400;
+  @apply text-3xl;
+}
+
+p {
+  @apply bg-cool-gray-700;
+  @apply text-gray-500;
+  @apply text-xl;
+}
+
+textarea, input, select, button {
+  @apply text-gray-400;
+  @apply text-2xl;
 }
 </style>

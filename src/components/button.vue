@@ -1,10 +1,10 @@
 <template>
-  <button class="text-gray-400 text-2xl">{{text}}</button>
+  <button>{{text}}</button>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-export default ({
+export default defineComponent({
   name: 'Button',
   props: {
     text: String

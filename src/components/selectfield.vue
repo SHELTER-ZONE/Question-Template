@@ -1,5 +1,5 @@
 <template>
-  <select class="text-gray-400 text-2xl">
+  <select>
     <option v-for="option in options" :key="option" value="option">{{option}}</option>
   </select>
 </template>

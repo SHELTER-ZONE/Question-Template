@@ -1,5 +1,5 @@
 <template>
-  <textarea class="text-gray-400 text-2xl" rows="5" v-bind:placeholder="placeholder"></textarea>
+  <textarea rows="5" v-bind:placeholder="placeholder"></textarea>
 </template>
 
 <script lang="ts">

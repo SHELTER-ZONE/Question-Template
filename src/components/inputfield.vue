@@ -1,5 +1,5 @@
 <template>
-  <input class="text-gray-400 text-2xl" type="text" v-bind:placeholder="placeholder" />
+  <input type="text" v-bind:placeholder="placeholder" />
 </template>
 
 <script lang="ts">

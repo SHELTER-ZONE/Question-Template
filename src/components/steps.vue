@@ -1,5 +1,5 @@
 <template>
-  <div class="steps bg-cool-gray-700">
+  <div class="steps">
     <Step v-for="step in steps" :key="step" :text="step" />
   </div>
 </template>
@@ -21,6 +21,7 @@ export default defineComponent({
 
 <style scoped>
 .steps {
+  @apply bg-cool-gray-700;
   margin: 60px auto;
   max-width: 50rem;
   padding: 20px 0;

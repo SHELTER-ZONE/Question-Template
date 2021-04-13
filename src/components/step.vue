@@ -1,6 +1,6 @@
 <template>
   <div class="step">
-    <p class="bg-cool-gray-700 text-cool-gray-400 text-xl">{{text}}</p>
+    <p>{{text}}</p>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <h1 class="text-4xl text-cool-gray-400 m-10">{{title}}</h1>
+    <h1>{{title}}</h1>
   </div>
 </template>
 
@@ -22,6 +22,9 @@ export default defineComponent({
 }
 
 .header h1 {
+  @apply text-4xl;
+  @apply m-10;
+  background-color: transparent;
   text-shadow: 1.6px 1.6px #71717A;
 }
 </style>
