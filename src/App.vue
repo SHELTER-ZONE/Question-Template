@@ -1,10 +1,11 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
   <h1>SHELTER ZONE - QuestionTemplate</h1>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+
+import 'virtual:windi.css'
 
 export default defineComponent({
   name: 'App'
