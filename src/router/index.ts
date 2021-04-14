@@ -1,11 +1,17 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import App from '@/App.vue'
+import Landing from '@/views/landing.vue'
+import Sz from '@/views/sz.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    name: 'Landing',
+    component: Landing 
+  },
+  {
+    path: '/sz',
     name: 'SZQuestionTemplate',
-    component: App
+    component: Sz
   }
 ]
 

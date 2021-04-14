@@ -15,7 +15,7 @@ export default defineComponent({
 <style lang="postcss" scoped>
 button {
   @apply mb-8 md:mb-0;
-  padding: 18px 50px;
+  padding: 12px 50px;
   border: 1px solid #A1A1AA;
   outline: none;
 }
@@ -40,7 +40,6 @@ button:hover {
     background-position-y: -480px;
     color: #1F2937;
     border: 1px solid #2DD4BF;
-    transform: scale(0.95);
   }
 }
 </style>

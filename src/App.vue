@@ -1,18 +1,13 @@
 <template>
-  <Sz />
+  <router-view></router-view>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import 'virtual:windi.css'
 
-import Sz from '@/views/sz.vue'
-
 export default defineComponent({
-  name: 'App',
-  components: {
-    Sz
-  }
+  name: 'App'
 })
 </script>
 
@@ -34,6 +29,7 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .actionbar {
@@ -52,8 +48,12 @@ export default defineComponent({
   text-align: left;
 }
 
-.container h1, .container p {
+.container h1, .container p, .container div {
   margin-bottom: 10px;
+}
+
+.grid {
+  @apply bg-cool-gray-700 mt-10 grid-cols-2 md:grid-cols-6 gap-x-16 gap-y-5;
 }
 
 h1 {
