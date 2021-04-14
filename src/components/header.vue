@@ -14,7 +14,7 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .header {
   border-bottom: 2px solid #2DD4BF;
   margin: 60px auto;
@@ -22,8 +22,7 @@ export default defineComponent({
 }
 
 .header h1 {
-  @apply text-4xl;
-  @apply m-10;
+  @apply text-4xl m-10;
   background-color: transparent;
   text-shadow: 1.6px 1.6px #71717A;
 }

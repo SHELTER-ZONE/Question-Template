@@ -19,13 +19,12 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .steps {
-  @apply bg-cool-gray-700;
+  @apply bg-cool-gray-700 hidden md:flex;
   margin: 60px auto;
   max-width: 50rem;
   padding: 20px 0;
   border: 1px solid #A1A1AA;
-  display: flex;
 }
 </style>

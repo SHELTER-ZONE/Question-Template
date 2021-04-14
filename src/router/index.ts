@@ -4,7 +4,7 @@ import App from '@/App.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Landing',
+    name: 'SZQuestionTemplate',
     component: App
   }
 ]
