@@ -21,10 +21,10 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 .steps {
-  @apply bg-cool-gray-700 hidden md:flex;
   margin: 60px auto;
   max-width: 50rem;
   padding: 20px 0;
-  border: 1px solid #A1A1AA;
+  @apply border;
+  @apply bg-cool-gray-700 border-gray-400 hidden md:flex;
 }
 </style>

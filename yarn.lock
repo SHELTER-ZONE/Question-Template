@@ -183,6 +183,11 @@ bluebird@~3.4.1:
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.7.tgz#f72d760be09b7f76d08ed8fae98b289a8d05fab3"
   integrity sha1-9y12C+Cbf3bQjtj66Ysomo0F+rM=
 
+bootstrap-icons-vue@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/bootstrap-icons-vue/-/bootstrap-icons-vue-0.6.0.tgz#b58bc4817028b01ebd19cceafc90b6f9e5f10e13"
+  integrity sha512-UcTSH7GAy0nP3MMmH4jxMPBMXystXPp7aBd1pWBJyBXV+ksggdgu14E1RTj4bedrsdmp5hIFcCZa4ydkD+pH/Q==
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"

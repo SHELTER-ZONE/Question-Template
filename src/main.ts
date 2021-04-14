@@ -7,3 +7,8 @@ const app = createApp(App)
 app
     .use(router)
     .mount('#app')
+
+
+router.afterEach(()=>{
+    window.scrollTo(0, 0)
+})

@@ -1,13 +1,21 @@
 <template>
-  <router-view></router-view>
+  <NavBar />
+  <router-view class="router-view-area"></router-view>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent} from 'vue'
+
+import NavBar from '@/components/NavBar.vue'
 import 'virtual:windi.css'
 
 export default defineComponent({
-  name: 'App'
+  name: 'App',
+  components:{
+    NavBar
+  },
+
+
 })
 </script>
 
@@ -17,35 +25,41 @@ export default defineComponent({
   src: url("@/assets/disposabledroid-bb.regular.ttf");
 }
 
-* {
-  @apply max-w-xs md:max-w-lg lg:max-w-full;
-  margin: 0 auto;
-  background-color: #1F2937;
-  overflow-x: hidden;
+html, body, #app{
+  /* @apply max-w-xs m-auto overflow-x-hidden md:max-w-lg lg:max-w-full; */
+  @apply w-full h-full;
+  @apply bg-cool-gray-800;
 }
 
 #app {
   font-family: DisposableDroidBB;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  margin-bottom: 40px;
+  @apply text-left;
+}
+
+.router-view-area{
+  @apply w-full h-full px-5;
+  @apply md: px-40 lg: px-60;
+}
+
+.primary-title{
+  @apply text-center text-3xl mt-10;
+  @apply text-gray-400 ;
 }
 
 .actionbar {
-  @apply block md:flex;
   margin: 60px auto;
   max-width: 55rem;
-  justify-content: space-between;
+  @apply block md:flex justify-between;
 }
 
 .container {
-  @apply bg-cool-gray-700;
-  margin: 60px auto;
   max-width: 55rem;
+  margin: 60px auto;
   padding: 40px;
-  border: 1px solid #A1A1AA;
-  text-align: left;
+  @apply border text-left;
+  @apply bg-cool-gray-700 border-gray-400;
 }
 
 .container h1, .container p, .container div {
@@ -57,7 +71,7 @@ export default defineComponent({
 }
 
 h1 {
-  @apply bg-cool-gray-700 text-gray-400 text-3xl;
+  @apply text-gray-400 text-3xl;
 }
 
 p {

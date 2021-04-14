@@ -1,6 +1,5 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Landing from '@/views/landing.vue'
-import Sz from '@/views/sz.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -9,9 +8,14 @@ const routes: Array<RouteRecordRaw> = [
     component: Landing 
   },
   {
-    path: '/sz',
-    name: 'SZQuestionTemplate',
-    component: Sz
+    path: '/servers/:serverName/',
+    name: 'CategorySelect',
+    component: () => import ('@/views/CategorySelect.vue'),
+  },
+  {
+    path: '/servers/:serverName/:category',
+    name: 'ServerTemplate',
+    component: () => import ('@/views/ServerTemplate.vue'),
   }
 ]
 
