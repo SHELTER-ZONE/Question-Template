@@ -2,8 +2,10 @@
   <div class="server-template">
     <div>
       <h1 class="primary-title">{{route.params.category}}</h1>
+
       <div>
         <Steps :steps="['步驟 1', '步驟 2', '步驟 3', '步驟 4', '步驟 5']" />
+
         <div class="container">
           <h1>步驟 1</h1>
           <p>
@@ -19,6 +21,7 @@
           <Button text="RESET" />
           <Button text="CONTINUE" />
         </div>
+        
       </div>
     </div>
   </div>
@@ -41,14 +44,14 @@ export default defineComponent({
     Button,
     Inputfield,
     Selectfield,
-    Messagefield,
+    Messagefield
   },
 
   setup(){
     const route = useRoute()
 
     return{
-      route,
+      route
     }
   }
 

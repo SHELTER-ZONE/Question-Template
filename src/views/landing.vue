@@ -21,7 +21,7 @@
         </router-link>
 
         <!-- TODO 創建Server按鈕，導向創建Server模板頁面 -->
-        <div class="icon plus-server">
+        <div @click="pushToServerCreate()" class="icon plus-server">
           <BIconPlus />
         </div>
       </div>
@@ -32,6 +32,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 import { BIconPlus } from 'bootstrap-icons-vue'
 import { servers } from '../interface'
 
@@ -44,30 +45,34 @@ export default defineComponent({
     BIconPlus
   },
 
-  setup(){
+  setup() {
+    const router = useRouter()
 
-  // 假資料，成品應該是從DB抓資料回來   
-  const serverList: Array<servers> = [
-    {
-      name: 'SHELTER ZONE',
-      icon: '',
-    },
-    {
-      name: 'TEST ZONE',
-      icon: '',
-    },
-  ]
+    const pushToServerCreate = (): void => {
+      router.push('/servers/create')
+    }
 
-  return{
-    serverList,
-  }
+    // 假資料，成品應該是從DB抓資料回來   
+    const serverList: Array<servers> = [
+      {
+        name: 'SHELTER ZONE',
+        icon: ''
+      },
+      {
+        name: 'TEST ZONE',
+        icon: ''
+      },
+    ]
+
+    return{
+      serverList,
+      pushToServerCreate
+    }
   }
 })
 </script>
 
 <style scoped lang="postcss">
-
-
 .icon {
   @apply rounded-md;
   width: 5rem;
@@ -85,5 +90,4 @@ export default defineComponent({
   background-image: url('@/assets/sz.png');
   background-size: contain;
 }
-
 </style>

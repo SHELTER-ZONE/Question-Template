@@ -1,19 +1,24 @@
 <template>
   <div class="nav-container">
-      <router-link v-if="route.path !== '/'" to="/"><BIconHouseFill class="nav-icon"/></router-link>
-      <p class="nav-text" v-if="route.path === '/'">Homepage</p>
-      <p class="nav-text">{{route.params.serverName}}</p>
+    <ul>
+      <li><router-link v-if="route.path !== '/'" to="/"><BIconHouseFill class="nav-icon"/></router-link></li>
+      <!-- Login Icon -->
+      <li><BIconPersonSquare class="nav-icon" /></li>
+    </ul>
+    <p class="nav-text" v-if="route.path === '/'">Homepage</p>
+    <p class="nav-text">{{route.params.serverName}}</p>
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent} from 'vue'
+import { defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
-import { BIconHouseFill } from 'bootstrap-icons-vue'
+import { BIconHouseFill, BIconPersonSquare } from 'bootstrap-icons-vue'
 export default defineComponent({
     name: "NavBar",
     components: {
-        BIconHouseFill
+        BIconHouseFill,
+        BIconPersonSquare
     },
     setup(){
         const route = useRoute()

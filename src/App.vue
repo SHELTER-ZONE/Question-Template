@@ -13,9 +13,7 @@ export default defineComponent({
   name: 'App',
   components:{
     NavBar
-  },
-
-
+  }
 })
 </script>
 
@@ -85,5 +83,9 @@ p {
 
 textarea, input, select, button {
   @apply text-gray-400 text-2xl bg-cool-gray-800;
+}
+
+ul li {
+  @apply float-left;
 }
 </style>

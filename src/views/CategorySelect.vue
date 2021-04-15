@@ -7,7 +7,6 @@
            @click="selectCategory(cate)">
            <BIconBookmarkFill class="text-teal-400 mr-5"/><span>{{cate}}</span>
     </div>
-    
   </div>
 </template>
 
@@ -15,6 +14,7 @@
 import { defineComponent } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { BIconBookmarkFill } from 'bootstrap-icons-vue'
+
 export default defineComponent({
   name: "CategorySelect",
   
@@ -48,9 +48,10 @@ export default defineComponent({
 </script>
 
 <style scoped lang="postcss">
-.category-container{
+.category-container {
   @apply border flex items-center align-middle mt-5 mb-5 p-5;
   @apply cursor-pointer border-gray-400 bg-gray-700 text-gray-400 rounded-sm;
   @apply hover: text-teal-400;
+  transition: color 0.2s ease-in-out;
 }
 </style>
