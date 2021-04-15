@@ -9,21 +9,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
-
-import Steps from '@/components/steps.vue'
 import Button from '@/components/button.vue'
-import Inputfield from '@/components/inputfield.vue'
-import Selectfield from '@/components/selectfield.vue'
-import Messagefield from '@/components/messagefield.vue'
+import Field from '@/components/field.vue'
 
 export default defineComponent({
   name: 'ServerTemplate',
   components: {
-    Steps,
     Button,
-    Inputfield,
-    Selectfield,
-    Messagefield
+    Field
   },
 
   setup() {

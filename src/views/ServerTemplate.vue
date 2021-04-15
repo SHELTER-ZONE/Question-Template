@@ -12,9 +12,11 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <Inputfield placeholder="Example Input" />
-          <Selectfield :options="['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5']"/>
-          <Messagefield placeholder="Example Textarea"/>
+          <Field type="input" placeholder="Example Input" />
+          <Field type="select" 
+            :options="['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5']"
+          />
+          <Field type="textarea" placeholder="Example Textarea"/>
         </div>
 
         <div class="actionbar">
@@ -33,18 +35,14 @@ import { useRoute } from 'vue-router'
 
 import Steps from '@/components/steps.vue'
 import Button from '@/components/button.vue'
-import Inputfield from '@/components/inputfield.vue'
-import Selectfield from '@/components/selectfield.vue'
-import Messagefield from '@/components/messagefield.vue'
+import Field from '@/components/field.vue'
 
 export default defineComponent({
   name: 'ServerTemplate',
   components: {
     Steps,
     Button,
-    Inputfield,
-    Selectfield,
-    Messagefield
+    Field
   },
 
   setup(){
