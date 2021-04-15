@@ -38,10 +38,10 @@ import { servers } from '../interface'
 import Button from '@/components/button.vue'
 
 export default defineComponent({
-  name: 'Sz',
+  name: 'Landing',
   components: {
     Button,
-  BIconPlus,
+    BIconPlus
   },
 
   setup(){

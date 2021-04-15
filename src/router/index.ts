@@ -5,7 +5,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Landing',
-    component: Landing 
+    component: Landing
   },
   {
     path: '/servers/:serverName/',

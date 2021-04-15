@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent} from 'vue'
+import { defineComponent } from 'vue'
 
 import NavBar from '@/components/NavBar.vue'
 import 'virtual:windi.css'
@@ -27,8 +27,8 @@ export default defineComponent({
 
 html, body, #app{
   /* @apply max-w-xs m-auto overflow-x-hidden md:max-w-lg lg:max-w-full; */
-  @apply w-full h-full;
   @apply bg-cool-gray-800;
+  @apply mb-10;
 }
 
 #app {
@@ -45,13 +45,18 @@ html, body, #app{
 
 .primary-title{
   @apply text-center text-3xl mt-10;
-  @apply text-gray-400 ;
+  @apply text-gray-400;
+  margin: 4rem auto;
+  max-width: 60rem;
+  padding-bottom: 3rem;
+  border-bottom: 3px solid #2DD4BF;
 }
 
 .actionbar {
+  text-align: center;
   margin: 60px auto;
   max-width: 55rem;
-  @apply block md:flex justify-between;
+  @apply block md:flex justify-between m-10 md:m-auto;
 }
 
 .container {
@@ -79,6 +84,6 @@ p {
 }
 
 textarea, input, select, button {
-  @apply text-gray-400 text-2xl;
+  @apply text-gray-400 text-2xl bg-cool-gray-800;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="nav-container">
-      <router-link to="/"><BIconHouseFill class="nav-icon"/></router-link>
-      <p class="nav-text" v-if="route.path === '/'">Home</p>
+      <router-link v-if="route.path !== '/'" to="/"><BIconHouseFill class="nav-icon"/></router-link>
+      <p class="nav-text" v-if="route.path === '/'">Homepage</p>
       <p class="nav-text">{{route.params.serverName}}</p>
   </div>
 </template>
@@ -27,7 +27,7 @@ export default defineComponent({
 
 <style scoped lang="postcss">
 .nav-container{
-    @apply flex items-center justify-between sticky top-0 w-full  px-10 pt-2 pb-2;
+    @apply flex items-center justify-between sticky top-0 w-full px-10 pt-2 pb-2 z-10;
     @apply bg-teal-400;
 }
 
