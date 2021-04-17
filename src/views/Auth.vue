@@ -1,16 +1,17 @@
 <template>
   <div class="server-create">
     <div>
-      <h1 class="primary-title">Server Create</h1>
+      <h1 class="primary-title">Authentication</h1>
 
       <div class="container">
-        <h1>何務器創建</h1>
-        <Field type="input" placeholder="Server Name" />
-        <Field type="image" placeholder="Password" />
+        <h1>用戶認證</h1>
+        <Field type="input" placeholder="Email" />
+        <Field type="input" placeholder="Password" />
       </div>
 
       <div class="actionbar">
-        <Button text="CONFIRM" />
+        <Button text="LOGIN" />
+        <Button text="REGISTER" />
       </div>
 
     </div>
@@ -24,7 +25,7 @@ import Button from '@/components/button.vue'
 import Field from '@/components/field.vue'
 
 export default defineComponent({
-  name: 'ServerTemplate',
+  name: 'Auth',
   components: {
     Button,
     Field

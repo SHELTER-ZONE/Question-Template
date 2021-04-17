@@ -7,6 +7,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import ('@/views/Landing.vue')
   },
   {
+    path: '/auth',
+    name: 'Authentication',
+    component: () => import ('@/views/Auth.vue')
+  },
+  {
     path: '/servers/:serverName/',
     name: 'CategorySelect',
     component: () => import ('@/views/CategorySelect.vue')

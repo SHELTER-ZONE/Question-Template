@@ -2,10 +2,12 @@
   <div class="nav-container">
     <ul>
       <li><router-link v-if="route.path !== '/'" to="/">
-        <BIconHouseFill class="nav-icon"/>
+        <BIconHouseFill class="nav-icon" />
       </router-link></li>
       <!-- Login Icon -->
-      <li><BIconPersonSquare class="nav-icon" /></li>
+      <li><router-link to="/auth">
+        <BIconPersonSquare class="nav-icon" />
+      </router-link></li>
     </ul>
     <p class="nav-text" v-if="route.path === '/'">Homepage</p>
     <p class="nav-text">{{route.params.serverName}}</p>
