@@ -1,0 +1,32 @@
+{
+    "Discord Bot": {
+        "notice":[
+            "提問前請先試著自行 Google",
+            "..."
+        ],
+        "areas":[
+            {
+                "title": "期望達到的情況/行為/目的",
+                "description": "你最終想實現甚麼樣的功能，請詳述",
+                "required": true
+            },
+            {
+                "title": "實際執行的情況/行為",
+                "description": "...",
+                "required": true
+            },
+            {
+                "title": "重現步驟/過程",
+                "description": "你實際的操作步驟/過程為何?",
+                "required": true
+            },
+            {
+                "title": "程式碼",
+                "description": "請附上你發生錯誤的程式碼(請附上整個函式區塊的程式碼)",
+                "lang": "",
+                "required": true
+            }
+        ]
+    }
+
+}
