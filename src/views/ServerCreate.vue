@@ -4,7 +4,7 @@
       <h1 class="primary-title">Server Create</h1>
 
       <div class="container">
-        <h1>何務器創建</h1>
+        <h1>何務器模板創建</h1>
         <Field type="input" placeholder="Server Name" />
         <Field type="image" placeholder="Password" />
       </div>
