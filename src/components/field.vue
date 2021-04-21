@@ -5,7 +5,7 @@
     <option v-for="option in options" :key="option" value="option">{{option}}
     </option>
   </select>
-  <textarea v-if="type === 'textarea'" rows="5" 
+  <textarea v-if="type === 'textarea'" rows="3" 
   v-bind:placeholder="placeholder"></textarea>
   <input v-if="type === 'image'" type="file" accept="image/*" />
 </template>

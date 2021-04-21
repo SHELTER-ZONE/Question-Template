@@ -6,7 +6,7 @@
       <div class="container">
         <h1>何務器模板創建</h1>
         <Field type="input" placeholder="Server Name" />
-        <Field type="image" placeholder="Password" />
+        <Field type="image" />
       </div>
 
       <div class="actionbar">

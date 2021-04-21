@@ -22,7 +22,7 @@
 
         <div class="actionbar">
           <Button text="RESET" />
-          <Button text="CONFIRM" />
+          <Button text="GENERATE" />
         </div>
         
       </div>

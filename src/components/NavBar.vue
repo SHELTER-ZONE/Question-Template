@@ -18,8 +18,9 @@
 import { defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
 import { BIconHouseFill, BIconPersonSquare } from 'bootstrap-icons-vue'
+
 export default defineComponent({
-  name: "NavBar",
+  name: "Navbar",
   components: {
     BIconHouseFill,
     BIconPersonSquare

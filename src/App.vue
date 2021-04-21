@@ -1,18 +1,34 @@
 <template>
-  <NavBar />
-  <router-view class="router-view-area"></router-view>
+  <NavBar v-if="hasLoaded" />
+  <Preloader v-if="!hasLoaded" />
+  <router-view v-if="hasLoaded" class="router-view-area"></router-view>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import NavBar from '@/components/NavBar.vue'
+import Navbar from '@/components/navbar.vue'
+import Preloader from '@/components/preloader.vue'
+
 import 'virtual:windi.css'
 
 export default defineComponent({
   name: 'App',
-  components:{
-    NavBar
+  components: {
+    Navbar,
+    Preloader
+  },
+  data: () => {
+    return {
+      hasLoaded: false
+    }
+  },
+  mounted() {
+    document.onreadystatechange = () => {
+      if (document.readyState == "complete") {
+        this.hasLoaded = true;
+      }
+    }
   }
 })
 </script>
