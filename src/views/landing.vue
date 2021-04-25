@@ -2,15 +2,15 @@
   <div class="landing">
     <h1 class="primary-title">SHELTER ZONE - 問題模板</h1>
 
-    <div class="container">
+    <Container>
       <h1>App 簡介</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
-    </div>
+    </Container>
 
-    <div class="container">
+    <Container>
       <h1>模板</h1>
       <div class="grid">
 
@@ -20,53 +20,57 @@
                           :to="`/servers/${server.name}`">
         </router-link>
 
-        <!-- TODO 創建Server按鈕，導向創建Server模板頁面 -->
         <div @click="pushToServerCreate()" class="icon plus-server">
           <BIconPlus />
         </div>
       </div>
       <div class="mt-5"></div>
-    </div>
+    </Container>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
 import { BIconPlus } from 'bootstrap-icons-vue'
 import { servers } from '../interface'
 
-import Button from '@/components/button.vue'
+import Container from '@/components/Container.vue'
+import Button from '@/components/Button.vue'
 
 export default defineComponent({
   name: 'Landing',
   components: {
+    Container,
     Button,
     BIconPlus
   },
+  methods: {
+    pushToServerCreate() {
+      // @ts-ignore
+      this.$swal({
+        icon: 'warning',
+        title: '此功能暫不開放.',
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 2600,
+        timerProgressBar: true,
+        padding: '20px'
+      });
+    }
+  },
 
   setup() {
-    const router = useRouter()
-
-    const pushToServerCreate = (): void => {
-      router.push('/servers/create')
-    }
-
     // 假資料，成品應該是從DB抓資料回來   
     const serverList: Array<servers> = [
       {
         name: 'SHELTER ZONE',
         icon: ''
-      },
-      {
-        name: 'TEST ZONE',
-        icon: ''
-      },
+      }
     ]
 
     return{
-      serverList,
-      pushToServerCreate
+      serverList
     }
   }
 })

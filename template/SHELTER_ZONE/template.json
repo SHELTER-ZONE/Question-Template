@@ -26,6 +26,7 @@
             "title": "程式碼",
             "description": "請付上你發生錯誤的程式碼 (包含整個函式區塊的程式碼)",
             "lang": true,
+            "image": true,
             "type": "textarea",
             "placeholder": "程式碼",
             "required": true

@@ -1,5 +1,5 @@
 <template>
-  <NavBar v-if="hasLoaded" />
+  <Navbar v-if="hasLoaded" />
   <Preloader v-if="!hasLoaded" />
   <router-view v-if="hasLoaded" class="router-view-area"></router-view>
 </template>
@@ -61,7 +61,7 @@ html, body, #app{
   @apply text-center text-3xl mt-10;
   @apply text-gray-400;
   margin: 4rem auto;
-  max-width: 60rem;
+  max-width: 55rem;
   padding-bottom: 3rem;
   border-bottom: 3px solid #2DD4BF;
 }
@@ -70,19 +70,7 @@ html, body, #app{
   text-align: center;
   margin: 60px auto;
   max-width: 55rem;
-  @apply block md:flex justify-between m-10 md:m-auto;
-}
-
-.container {
-  max-width: 55rem;
-  margin: 60px auto;
-  padding: 40px;
-  @apply border text-left;
-  @apply bg-cool-gray-700 border-gray-400;
-}
-
-.container h1, .container p, .container div {
-  margin-bottom: 10px;
+  @apply block mt-20;
 }
 
 .grid {

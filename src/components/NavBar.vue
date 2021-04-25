@@ -4,10 +4,10 @@
       <li><router-link v-if="route.path !== '/'" to="/">
         <BIconHouseFill class="nav-icon" />
       </router-link></li>
-      <!-- Login Icon -->
-      <li><router-link to="/auth">
-        <BIconPersonSquare class="nav-icon" />
-      </router-link></li>
+      <!-- Discord Icon -->
+      <li><a href="https://discord.com/invite/R75DXHH" target="_blank">
+        <BIconDiscord class="nav-icon" />
+      </a></li>
     </ul>
     <p class="nav-text" v-if="route.path === '/'">Homepage</p>
     <p class="nav-text">{{route.params.serverName}}</p>
@@ -17,13 +17,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
-import { BIconHouseFill, BIconPersonSquare } from 'bootstrap-icons-vue'
+import { BIconHouseFill, BIconDiscord } from 'bootstrap-icons-vue'
 
 export default defineComponent({
   name: "Navbar",
   components: {
     BIconHouseFill,
-    BIconPersonSquare
+    BIconDiscord
   },
   setup() {
     const route = useRoute()
