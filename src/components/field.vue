@@ -7,7 +7,6 @@
   </select>
   <textarea v-if="type === 'textarea'" rows="3" 
   v-bind:placeholder="placeholder"></textarea>
-  <input id="imageUpload" v-if="type === 'image'" type="file" accept="image/*" />
 </template>
 
 <script lang="ts">

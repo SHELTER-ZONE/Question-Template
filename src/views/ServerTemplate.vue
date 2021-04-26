@@ -19,7 +19,10 @@
           <Field v-if="area.type === 'select'" type="input" />
           <Field v-if="area.type === 'textarea'" type="textarea" :placeholder="area.placeholder" />
           <p v-if="area.image === true">上載圖片: (可選)</p>
-          <Field v-if="area.image === true" type="image" />
+          <input @change="onImageChange" id="imageUpload" v-if="area.image === true" type="file" accept="image/*" />
+          <div v-if="area.image === true">
+            <img v-if="url" :src="url" />
+          </div>
         </Container>
 
         <div class="actionbar">
@@ -48,7 +51,16 @@ export default defineComponent({
     Button,
     Field
   },
+  data() {
+    return {
+      url: ''
+    }
+  },
   methods: {
+    onImageChange(e: { target: { files: any[] } }) {
+      const file = e.target.files[0];
+      this.url = URL.createObjectURL(file);
+    },
     generate() {
       const fields = [];
 
@@ -117,3 +129,18 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped lang="postcss">
+input {
+  outline: none;
+  margin-top: 20px;
+  padding: 15px 25px;
+  width: 100%;
+  box-shadow: 0px 1px #2DD4BF;
+}
+
+input[type=file] {
+  margin-top: 0px;
+  cursor: pointer;
+}
+</style>
