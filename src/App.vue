@@ -77,7 +77,7 @@ html, body, #app{
   @apply bg-cool-gray-700 mt-10 grid-cols-2 md:grid-cols-6 gap-x-16 gap-y-5;
 }
 
-h1 {
+h1, h2 {
   @apply text-gray-400 text-3xl;
 }
 

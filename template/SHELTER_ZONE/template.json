@@ -5,22 +5,19 @@
             "title": "期望達到的情況 / 行為 / 目的",
             "description": "你最終想實現甚麼樣的功能, 請詳述.",
             "type": "textarea",
-            "placeholder": "Input here...",
-            "required": true
+            "placeholder": "Input here..."
         },
         {
             "title": "實際執行時的情況 / 行為",
             "description": null,
             "type": "textarea",
-            "placeholder": "Input here...",
-            "required": true
+            "placeholder": "Input here..."
         },
         {
             "title": "重現步驟 / 過程",
             "description": "你實際的操作步驟 / 過程為何?",
             "type": "textarea",
-            "placeholder": "Input here...",
-            "required": true
+            "placeholder": "Input here..."
         },
         {
             "title": "程式碼",
@@ -28,8 +25,7 @@
             "lang": true,
             "image": true,
             "type": "textarea",
-            "placeholder": "程式碼",
-            "required": true
+            "placeholder": "程式碼"
         }
     ]
 }
