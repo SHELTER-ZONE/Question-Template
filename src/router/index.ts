@@ -1,36 +1,22 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
+import Home from '../views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Landing',
-    component: () => import ('@/views/Landing.vue')
+    name: 'Home',
+    component: Home
   },
   {
-    path: '/auth',
-    name: 'Authentication',
-    component: () => import ('@/views/Auth.vue')
+    path: '/question-generate',
+    name: 'QuestionGenerate',
+    component: () => import('../views/QuestionGenerate.vue')
   },
-  {
-    path: '/servers/:serverName/',
-    name: 'CategorySelect',
-    component: () => import ('@/views/CategorySelect.vue')
-  },
-  {
-    path: '/servers/:serverName/:category',
-    name: 'ServerTemplate',
-    component: () => import ('@/views/ServerTemplate.vue')
-  },
-  {
-    path: '/servers/create',
-    name: 'ServerCreate',
-    component: () => import ('@/views/ServerCreate.vue')
-  }
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
+  history: createWebHashHistory(), 
+  routes 
 })
 
-export default router 
+export default router
