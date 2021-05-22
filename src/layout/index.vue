@@ -2,6 +2,7 @@
   <div class="app-wrapper">
     <header>SHELTER ZONE - QuestionGenerator</header>
     <router-view />
+    <footer>Present by SHELTER-ZONE</footer>
   </div>
 
 </template>
@@ -22,5 +23,9 @@ export default defineComponent({
 
 header {
   @apply text-4xl text-center;
+}
+
+footer {
+  @apply mt-10 text-center text-sm text-gray-500;
 }
 </style>
