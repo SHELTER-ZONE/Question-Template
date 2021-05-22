@@ -26,9 +26,13 @@ li {
 }
 
 textarea {
-  @apply text-teal-400 outline-none rounded-md p-3 w-full bg-gray-800;
+  @apply text-teal-400 outline-none rounded-md p-3 w-full bg-gray-800 h-50;
 }
 
 .layout {
   @apply w-full h-full;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }
