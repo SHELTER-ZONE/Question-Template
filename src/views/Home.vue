@@ -14,7 +14,7 @@
   <div class="mt-10">
     <TextBlock>
       <div class="inner-title">
-        <img src="../assets/icon/alert-circle.svg" alt="alert-icon" />
+        <img src="../assets/icon/alert-triangle.svg" alt="alert-icon" />
         <p class="ml-3"><strong >提問前請注意:</strong></p>
       </div>
 

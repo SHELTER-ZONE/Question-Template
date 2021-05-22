@@ -1,6 +1,6 @@
 <template>
   <div class="app-wrapper">
-    <header>SHELTER ZONE - QuestionGenerator</header>
+    <header @click="toHome">SHELTER ZONE - QuestionGenerator</header>
     <router-view />
     <footer>Present by SHELTER-ZONE</footer>
   </div>
@@ -9,9 +9,20 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-
+import { useRouter } from 'vue-router'
 export default defineComponent({
-  name: 'Layout'
+  name: 'Layout',
+  setup(){
+    const router = useRouter()
+    
+    const toHome = () => {
+      router.push('/')
+    }
+
+    return {
+      toHome,
+    }
+  }
 })
 </script>
 
@@ -22,7 +33,7 @@ export default defineComponent({
 }
 
 header {
-  @apply text-4xl text-center;
+  @apply text-4xl text-center cursor-pointer;
 }
 
 footer {

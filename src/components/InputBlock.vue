@@ -5,10 +5,10 @@
                 <p class="title"><strong>STEP {{step}}. {{title}}</strong></p>
                 <p class="sub"><strong>{{sub}}</strong></p>
             </div>
-            <button class="hint-btn">看範例</button>
+            <button class="hint-btn" @click="openExample">看範例</button>
         </section>
         <section>
-            <textarea v-model="syncForm[`step${step}`]" placeholder="請輸入文字..." cols="20" rows="10"></textarea>
+            <textarea v-model="syncForm[`step${step}`]" placeholder="請輸入文字..."></textarea>
         </section>
     </div>
 </template>
@@ -24,8 +24,13 @@ export default defineComponent({
         get: () => props.formData,
         set: (val) => emit('update:templateData', val)
     })
+
+    const openExample = () => {
+        emit('openExample')
+    }
     return {
-        syncForm
+        syncForm,
+        openExample,
     }
   }
 })

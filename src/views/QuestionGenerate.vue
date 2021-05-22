@@ -8,7 +8,19 @@
       :formData="templateData"
       :title="title.title"
       :sub="title.sub"
+      @openExample="openExample=true"
     />
+
+    <TextBlock v-if="step === 4" >
+      <div class="inner-title flex mb-5">
+        <img src="../assets/icon/alert-circle.svg" alt="alert-icon" />
+        <p class="ml-3"><strong >圖片與截圖注意事項:</strong></p>
+      </div>
+      <ul>
+        <li>程式碼截圖請包含行數</li>
+        <li>請截取程式碼完整 "區塊"，而不是單獨某幾行</li>
+      </ul>
+    </TextBlock>
 
     <button v-if="step > 1" class="primary-btn w-full mt-3" @click="prePage">
       上一步
@@ -20,9 +32,16 @@
       預覽
     </button>
 
-    <Dialog
-      v-if="openDialog"
-      @close="openDialog = false"
+    <ExampleDialog 
+      v-if="openExample"
+      @close="openExample = false"
+      :titles="stepTitle"
+      :step="step"
+    />
+
+    <PreviewDialog
+      v-if="openPreview"
+      @close="openPreview = false"
       :data="templateData"
       :titles="stepTitle"
     />
@@ -32,13 +51,16 @@
 <script lang="ts">
 import { defineComponent, reactive, ref } from "vue"
 import InputBlock from "../components/InputBlock.vue"
-import Dialog from "../components/Dialog.vue"
+import TextBlock from "../components/TextBlock.vue"
+import ExampleDialog from "../components/ExampleDialog.vue"
+import PreviewDialog from "../components/PreviewDialog.vue"
 
 export default defineComponent({
   name: "QuestionGenerate",
-  components: { InputBlock, Dialog },
+  components: { InputBlock, TextBlock, ExampleDialog, PreviewDialog },
   setup() {
-    const openDialog = ref(false)
+    const openPreview = ref(false)
+    const openExample = ref(false)
     const step = ref(1)
     const templateData = reactive({
       step1: "",
@@ -59,11 +81,7 @@ export default defineComponent({
       {
         title: "重現步驟 / 過程",
         sub: "你實際的操作步驟 / 過程為何",
-      },
-      {
-        title: "重現步驟 / 過程",
-        sub: "你實際的操作步驟 / 過程為何",
-      },
+      }
     ]
 
     const prePage = () => {
@@ -77,10 +95,11 @@ export default defineComponent({
     }
 
     const preview = () => {
-      openDialog.value = true
+      openPreview.value = true
     }
     return {
-      openDialog,
+      openExample,
+      openPreview,
       step,
       prePage,
       nextPage,
