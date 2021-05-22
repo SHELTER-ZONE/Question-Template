@@ -25,6 +25,10 @@ li {
   @apply text-gray-400;
 }
 
+textarea {
+  @apply text-teal-400 outline-none rounded-md p-3 w-full bg-gray-800;
+}
+
 .layout {
   @apply w-full h-full;
 }
