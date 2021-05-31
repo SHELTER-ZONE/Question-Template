@@ -1,8 +1,12 @@
 <template>
   <TextBlock>
     我們發現非常多人提問時，無法將自己的問題與目的描述清楚。 由此照成許多
-    <span class="hightlight">通靈問題</span> 或是
-    <span class="hightlight">XY問題</span
+    <span class="highlight"
+    data-tooltip="通靈一詞，在技術交流領域中，代表人們需通過一些神奇的方法，試圖悟出理解對方的想法
+    是一種揶揄與嘲諷。">
+    通靈問題</span> 或是
+    <span class="highlight"
+    data-tooltip="XY問題，是指你向別人詢問你嘗試的解法，而不是真正的問題。">XY問題</span
     >，這不僅會浪費雙方時間，還會讓許多開發者惱火，最後雙方都不愉快。
     <br><br>
     <p>本應用目的在於協助你更好的將問題描述清楚</p>
@@ -57,8 +61,50 @@ export default defineComponent({
 </script>
 
 <style lang="postcss" scoped>
-.hightlight {
-  @apply text-teal-400;
+.highlight {
+  @apply text-teal-400 relative;
+}
+
+/* 找人去把下面的轉去@apply format🙏. --Lunari */
+
+.highlight::before,
+.highlight::after {
+  --scale: 0;
+  --arrowSize: 10px;
+
+  @apply absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--translateY, 0)) scale(var(--scale));
+  transition: 0.2s transform ease-in-out;
+  transform-origin: bottom center;
+}
+
+.highlight::before {
+  --translateY: calc(-100% - var(--arrowSize));
+
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.4);
+  content: attr(data-tooltip);
+  width: max-content;
+  max-width: 800%;
+  font-size: 15px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.highlight:hover::before,
+.highlight:hover::after {
+  --scale: 1;
+}
+
+.highlight::after {
+  --translateY: calc(-1 * var(--arrowSize));
+
+  content: '';
+  border: var(--arrowSize) solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  transform-origin: top center;
 }
 
 .inner-title {

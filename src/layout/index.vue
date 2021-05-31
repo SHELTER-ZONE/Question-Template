@@ -28,12 +28,12 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 .app-wrapper {
-  @apply max-w-200 w-full h-full overflow-auto;
+  @apply max-w-240 w-full h-full overflow-auto;
   @apply p-5 m-auto;
 }
 
 header {
-  @apply text-4xl text-center cursor-pointer;
+  @apply text-3xl text-center cursor-pointer p-10;
 }
 
 footer {
