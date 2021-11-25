@@ -19,7 +19,7 @@
     <TextBlock>
       <div class="inner-title">
         <img src="../assets/icon/alert-triangle.svg" alt="alert-icon" />
-        <p class="ml-3"><strong >提問前請注意:</strong></p>
+        <p class="ml-3"><strong>提問前請注意:</strong></p>
       </div>
 
       <ul>
@@ -62,10 +62,8 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 .highlight {
-  @apply text-teal-400 relative;
+  @apply text-teal-400 relative cursor-default;
 }
-
-/* 找人去把下面的轉去@apply format🙏. --Lunari */
 
 .highlight::before,
 .highlight::after {
