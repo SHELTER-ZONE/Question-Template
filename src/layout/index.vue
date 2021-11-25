@@ -2,7 +2,7 @@
   <div class="app-wrapper">
     <header @click="toHome">SHELTER ZONE - QuestionGenerator</header>
     <router-view />
-    <footer>Present by SHELTER-ZONE</footer>
+    <footer>Presented by SHELTER-ZONE</footer>
   </div>
 
 </template>
