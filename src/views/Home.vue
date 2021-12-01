@@ -81,8 +81,8 @@ export default defineComponent({
 .highlight::before {
   --translateY: calc(-100% - var(--arrowSize));
 
-  padding: 0.8rem;
-  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
   content: attr(data-tooltip);
   width: max-content;
   max-width: 800%;
@@ -108,5 +108,22 @@ export default defineComponent({
 .inner-title {
   @apply flex;
   @apply text-lg mb-3;
+}
+
+@media only screen and (max-width: 768px) {
+  .highlight::before,
+  .highlight::after {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+  }
+
+  .highlight::before {
+    max-width: 90%;
+  }
+
+  .highlight::after {
+    border-top-color: transparent;
+  }
 }
 </style>
